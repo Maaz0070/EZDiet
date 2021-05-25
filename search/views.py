@@ -9,3 +9,11 @@ from django.urls import reverse #takes name of voew and gets what acutal url pat
 # Create your views here.
 def index(request):
     return render(request, "search/welcome.html")
+
+def results(request, entry):
+if request.method == "POST":
+    userEntry = entry
+    #List = get form API
+    return render(request, "search/results.html", {
+        #"List": List //pass in the list to ouur html
+    })
